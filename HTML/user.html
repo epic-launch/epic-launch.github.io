@@ -1,0 +1,107 @@
+<DOCTYPE! HTML>
+<html>
+<head>
+<!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  
+<!-- Homepage CSS -->
+  <link rel="stylesheet" href="../CSS/user.css">
+  
+<!-- Parse API -->
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.2.min.js"></script>
+    
+<!-- Backbone and Dependencies-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ 
+  
+</head>
+
+<body>
+  
+<!-- End Navbar/Begin Container --> 
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="app.html">DINE</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            
+            
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right">            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <span class="name"></span> <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="new_request.html">New Request</a></li>
+                <li><a href="restrictions.html">My Flavor Profile</a><li>
+                <li class="divider"></li>
+                <li class="logout"><a class="logout">Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  <div class="account container">
+   <!-- <div id="authenticate">
+      <h4> Please Login to Continue. </h6>
+        <label>Email:</label><h5 class="text" id='email1'></h5><br>
+        <label>Password:</label><br><input type="text" id="password"><br><br>
+        <div id="login" class="btn btn-primary">Login</div>
+    </div>-->
+    
+    <div class="details">
+      <h2 class="section-title">User Information</h2>
+      <label>First Name:</label><h5 class="text" id='first_name'></h5><input type="text" id="edit_fn" class='editing'><br>
+      <label>Last Name:</label><h5 class="text" id='last_name'></h5><input type="text" id="edit_ln" class='editing'><br>
+      <label>Email:</label><h5 class="text" id='email'></h5><input type="text" id="edit_email" class='editing'><br>
+      <label>Password:</label><h5 class="text" id='password'>*****</h5><div id="pass_reset" class="editing btn btn-danger">Reset your Password.</div><br>
+      <div id="edit_details" class="btn btn-primary">Edit</div>
+      <div id="edit_details1" class="btn btn-primary">Save</div>
+     </div>
+  
+
+    <div class="bio">
+      <h2 class="section-title">User Bio</h2>
+      <label>Major:</label><h5 class="text1" id='major'></h5><input type="text" id="edit_major" class='editing1'><br>
+      <label>Minor:</label><h5 class="text1" id='minor'></h5><input type="text" id="edit_minor" class='editing1'><br>
+      <label>Graduation Year:</label><h5 class="text1" id='grad_year'></h5><input type="text" id="edit_grad_year" class='editing1'><br>
+      <label>Bio:</label><h5 class="text1" id='user_bio'></h5><textarea id="edit_user_bio" class='editing1'></textarea><br>
+      
+      <div id="edit_bio" class="btn btn-primary">Edit</div>
+      <div id="edit_bio1" class="btn btn-primary">Save</div>
+     </div>
+    
+    <div class="picture_upload">
+      <h2 class="section-title">Photo Upload</h2>
+      <img id="profile-pic" src=""><br><br>
+      <div class="btn btn-primary" id="edit_picture">Change Picture</div>
+      <div class="editing2">
+        <input type="file" id="picture"><br>
+        <div class="btn btn-primary" id="save-pic">Save</div>
+      </div>
+  </div>
+
+
+
+
+
+<!-- Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<!-- APP JS -->
+
+<!-- Modela JS -->
+ <script src="../Javascript/user.js"></script>
+</body>
+</html>

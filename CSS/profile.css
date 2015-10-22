@@ -1,0 +1,14 @@
+.details-box{
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+}
+
+#prof-pic{
+	width: 20%;
+	left:50%;
+	top: 80%;
+	display: inline-block;
+	position: relative;
+}
+

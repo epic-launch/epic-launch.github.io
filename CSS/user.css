@@ -1,0 +1,27 @@
+#edit_details1, .editing, #edit_bio1, .editing1, .editing2{
+	display: none;
+}
+
+#edit_details1, #edit_bio1{
+	width: 55px
+}
+
+#pass_reset{
+	width: 160px
+}
+
+.account{
+	display: flex;
+	flex-direction:row;
+}
+
+.details, .bio{
+	margin-right: 100px
+}
+
+#profile-pic{
+	height: 30%;
+	border: 2px solid black;
+	
+
+}
