@@ -7,7 +7,7 @@ $(document).ready(function(){
 			Parse.User.logIn(username, password, {
 	  			success: function(user) {
 	   				 console.log("logged in ");
-	   				window.location.href = "../HTML/app.html";
+	   				window.location.href = "../HTML/user.html";
 				},
 				error: function(user, error) {
 				    console.log("failed to logg in " + error);
@@ -75,7 +75,7 @@ $(document).ready(function(){
 
 				user.signUp(null, {
 				  success: function(user) {
-				    window.location.href = "../index.html";
+				    window.location.href = "../user.html";
 				  },
 				  error: function(user, error) {
 				    $("#register_box").prepend("<p class='alert_text' id='invalid_email'>Error: " + error.message + "</p>")

@@ -19,40 +19,30 @@
 <body>
   
 <!-- End Navbar/Begin Container --> 
-  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="app.html">DINE</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            
-            
-          </ul>
-          
-          <ul class="nav navbar-nav navbar-right">            
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                <span class="name"></span> <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="new_request.html">New Request</a></li>
-                <li><a href="restrictions.html">My Flavor Profile</a><li>
-                <li class="divider"></li>
-                <li class="logout"><a class="logout">Log Out</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../HTML/list.html">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../HTML/user.html">Edit User</a></li>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
   <div class="account container">
    <!-- <div id="authenticate">
       <h4> Please Login to Continue. </h6>
@@ -77,6 +67,9 @@
       <label>Major:</label><h5 class="text1" id='major'></h5><input type="text" id="edit_major" class='editing1'><br>
       <label>Minor:</label><h5 class="text1" id='minor'></h5><input type="text" id="edit_minor" class='editing1'><br>
       <label>Graduation Year:</label><h5 class="text1" id='grad_year'></h5><input type="text" id="edit_grad_year" class='editing1'><br>
+       <label>Twitter URL:</label><h5 class="text1" id='twitter'></h5><input type="text" id="edit_twitter_url" class='editing1'><br>
+       <label>Linkedin URL:</label><h5 class="text1" id='linkedin'></h5><input type="text" id="edit_linkedin_url" class='editing1'><br>
+       <label>Github URL:</label><h5 class="text1" id='github'></h5><input type="text" id="edit_github_url" class='editing1'><br>
       <label>Bio:</label><h5 class="text1" id='user_bio'></h5><textarea id="edit_user_bio" class='editing1'></textarea><br>
       
       <div id="edit_bio" class="btn btn-primary">Edit</div>

@@ -12,6 +12,9 @@ var userBio= currentUser.get("user_bio");
 var userID = currentUser.id;
 var username = currentUser.username;
 var userPhoto = currentUser.get("profilepicture");
+var github = currentUser.get("github_url");
+var twitter = currentUser.get("twitter_url");
+var linkedin = currentUser.get("linkedin_url");
 
 $(".name").text(name);
 $('#first_name').text(userFirstName);
@@ -21,14 +24,20 @@ $('#major').text(userMajor);
 $("#minor").text(userMinor);
 $("#grad_year").text(userGrad);
 $("#user_bio").text(userBio);
+$("#linkedin").text(linkedin);
+$("#twitter").text(twitter);
+$("#github").text(github);
 $("#profile-pic").attr("src", userPhoto.url());
 $("#edit_fn").val(userFirstName);
 $("#edit_ln").val(userLastName);
 $("#edit_email").val(userEmail);
 $("#edit_major").val(userMajor);
+$("#edit_grad_year").val(userGrad);
 $("#edit_minor").val(userMinor);
 $("#edit_user_bio").val(userBio);
-
+$("#edit_linkedin_url").val(linkedin);
+$("#edit_twitter_url").val(twitter);
+$("#edit_github_url").val(github);
 
 
 
@@ -69,11 +78,17 @@ $("#edit_bio1").click(function(){
   var update_major = $("#edit_major").val();
   var update_minor = $("#edit_minor").val();
   var update_grad_year = $("#edit_grad_year").val();
+  var update_linkedin = $("#edit_linkedin_url").val();
+  var update_twitter = $("#edit_twitter_url").val();
+  var update_github = $("#edit_github_url").val();
   var update_user_bio = $("#edit_user_bio").val();
 
   currentUser.set("major", update_major);
   currentUser.set("minor", update_minor);
   currentUser.set("grad_year", update_grad_year);
+  currentUser.set("twitter_url", update_twitter);
+  currentUser.set("linkedin_url", update_linkedin);
+  currentUser.set("github_url", update_github);
   currentUser.set("user_bio", update_user_bio);
   currentUser.save(null,{
     success: function(user){
