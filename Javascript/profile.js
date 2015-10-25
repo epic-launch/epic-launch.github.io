@@ -17,15 +17,16 @@ query.first({
     var email = results.get("email");
     var bio = results.get("user_bio");
     var picture = results.get("profilepicture");
-    console.log(name);
+    console.log(year);
     
     $("#name").text(fname + " " + lname);
-    $("#major").text(major);
-    $("#minor").text(minor);
-    $("#year").text(year);
+    $("#major").text("Major(s): "+ major);
+    $("#minor").text("Minor(s) and Certificate(s): "+minor);
+    $("#year").text("Graduation Year: "+year);
     $("#bio").text(bio);
     $(".email-to").attr("href","mailto:"+email);
-    $("#prof-pic").attr("src", picture.url())
+    $("#prof-pic").attr("src", picture.url());
+    $(".contact-title").text("Contact "+fname+":")
 
   },
   error: function(error) {

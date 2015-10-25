@@ -5,6 +5,7 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 <link href="../CSS/hover.css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../CSS/profile.css">
 
 <!-- Latest compiled and minified JavaScript -->
@@ -70,17 +71,25 @@
 <div class="container">
   <div class="top-box">
     <h2 id='name'></h2>
-    <img id="prof-pic" src="">
+    <div class="prof-pic">
+      <img id="prof-pic" src="">
+    </div>
+    <ul class="details-box">
+      <li class="detail-item"><h3 class="text" id="major"></h3></li>
+  		<li class="detail-item"><h3 class="text" id="minor"></h3></li>
+     <li class="detail-item"><h3 class="text" id="year"></h3></li>
+      
+    </ul>
   </div>
-  <div class="details-box">
-    <h4 class="label">Major(s): </h4><h3 class="text" id="major"></h3>
-		<h4 class="label">Minor(s) and Certificate(s): </h4><h3 class="text" id="minor"></h3>
-    <h4 class="label">Year: </h4><h3 class="text" id="year"></h3>
-    <a href='' class="email-to"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>
-</div>
-<div class="bio-box">
-  <h3 id="bio"></h3>
-</div>
+  <div class="bio-box">
+    <h3 id="bio-title">About Me: </h3><br>
+    <h3 id="bio"></h3>
+  </div>
+  <div class="contact-box">
+    <h3 class="contact-title"></h3><br>
+    <a href='' class="email-to"><i class="fa-4x fa fa-envelope"></i></a>
+    <a href='' class="github"><i class="fa-4x fa fa-twitter-square"></i></a>
+    <a href='' class="twitter"><i class="fa-4x fa fa-github-square"></i></a>
 </div>
 	<script src="../Javascript/profile.js"></script>
 </body>
