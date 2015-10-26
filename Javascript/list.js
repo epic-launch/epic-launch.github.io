@@ -2,7 +2,7 @@ Parse.initialize("ytmORm1NEOXV8e5ELZkEou62ywM4JJUS88R0V7UD", "xpYRPtwBActyCUjH1n
 
 var User = Parse.Object.extend("User");
 var query = new Parse.Query(User);
-query.ascending("last_name")
+query.ascending("first_name")
 query.find({
   success: function(object) {
 for (i = 0; i < object.length; i++) {
