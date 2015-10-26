@@ -19,10 +19,15 @@ query.first({
     var year = results.get("grad_year");
     var email = results.get("email");
     var bio = results.get("user_bio");
-    var picture = results.get("profilepicture");
+    var image = results.get("profilepicture");
     var github = results.get("github_url");
     var twitter = results.get("twitter_url");
     var linkedin = results.get("linkedin_url");
+    if (image == undefined){
+      image = "../Images/avatar-generic.jpg"
+    } else{
+      image = image.url();
+    }
    contact = {
         "email": email,
         "linkedin": linkedin,
@@ -35,7 +40,7 @@ query.first({
     $("#minor").text("Minor(s) and Certificate(s): "+minor);
     $("#year").text("Graduation Year: "+year);
     $("#bio").text(bio);
-    $("#prof-pic").attr("src", picture.url());
+    $("#prof-pic").attr("src", image);
     $(".contact-title").text("Contact "+fname+":");
     if (contact.email != undefined){
         $(".contact-box").append(
