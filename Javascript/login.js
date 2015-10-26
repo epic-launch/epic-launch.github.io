@@ -58,11 +58,7 @@ $(document).ready(function(){
 		var email = $("#register_email").val();
 		var conf_email = $("#confirm_email").val();
 		var password = $("#register_password").val();
-		var phone1 = $("phone1").val();
-		var phone2 = $("phone2").val();
-		var phone3 = $("phone3").val();
-		var phone_number = phone1 + phone2 + phone3;
-		if (fname != "" & lname != "" & email != "" & conf_email != "" & password != "" & phone1 != "" & phone2 != "" & phone3 != ""  ) {
+		if (fname != "" & lname != "" & email != "" & conf_email != "" ) {
 			if (email === conf_email){
 				var user = new Parse.User();
 				user.set("first_name", fname);
@@ -70,17 +66,18 @@ $(document).ready(function(){
 				user.set("username", email);
 				user.set("password", password);
 				user.set("email", email);
-				user.set("phone_number", phone_number);
-				user.set("Position", "Diner");
-
+				//var pic1 = document.getElementById('default-image');	
+				//var pic = pic1.files[0];			
+				
 				user.signUp(null, {
 				  success: function(user) {
-				    window.location.href = "../user.html";
+				    window.location.href = "../HTML/user.html";
 				  },
 				  error: function(user, error) {
 				    $("#register_box").prepend("<p class='alert_text' id='invalid_email'>Error: " + error.message + "</p>")
 				  }
 				});
+			
 			} else {
 				$("#register_box").prepend("<p class='alert_text' id='no_name'>Please make sure your emails match. </p>")
 			} 

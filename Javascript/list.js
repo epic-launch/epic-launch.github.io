@@ -10,7 +10,12 @@ for (i = 0; i < object.length; i++) {
     var fname = results.get("first_name");
     var lname = results.get("last_name");
     var image = results.get("profilepicture");
-    image = image.url();
+    if (image == undefined){
+      image = "../Images/avatar-generic.jpg"
+    } else{
+      image = image.url();
+    }
+
   	var id = results.id;
   	load(fname, lname, id, image)
 }
