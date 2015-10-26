@@ -17,6 +17,11 @@ var userPhoto = currentUser.get("profilepicture");
 var github = currentUser.get("github_url");
 var twitter = currentUser.get("twitter_url");
 var linkedin = currentUser.get("linkedin_url");
+if (image == undefined){
+      image = "../Images/avatar-generic.jpg"
+    } else{
+      image = image.url();
+    }
 
 $(".name").text(name);
 $('#first_name').text(userFirstName);
@@ -29,7 +34,7 @@ $("#user_bio").text(userBio);
 $("#linkedin").text(linkedin);
 $("#twitter").text(twitter);
 $("#github").text(github);
-$("#profile-pic").attr("src", userPhoto.url());
+$("#profile-pic").attr("src", image);
 $("#edit_fn").val(userFirstName);
 $("#edit_ln").val(userLastName);
 $("#edit_email").val(userEmail);
