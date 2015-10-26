@@ -1,6 +1,8 @@
 Parse.initialize("ytmORm1NEOXV8e5ELZkEou62ywM4JJUS88R0V7UD", "xpYRPtwBActyCUjH1nkvaSckiiyo7d07O9FQHO0N");
 var currentUser = Parse.User.current();
-
+  if (currentUser === null){
+    window.location.href = "../HTML/login.html"
+  }
 var name = currentUser.get("first_name");
 var userEmail = currentUser.get("email");
 var userFirstName = currentUser.get("first_name");
