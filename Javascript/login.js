@@ -6,7 +6,7 @@ $(document).ready(function(){
 		if (username != "" & password != ""){
 			Parse.User.logIn(username, password, {
 	  			success: function(user) {
-	   				 console.log("logged in ");
+	   				 analytics.track("logged in ")
 	   				window.location.href = "../HTML/user.html";
 				},
 				error: function(user, error) {
@@ -34,7 +34,7 @@ $(document).ready(function(){
 			Parse.User.requestPasswordReset(email, {
 			  success: function() {
 			   $(".alerts").append("<p class='alert alert-success alert_text alert-dismissible' role='alert id='invalid_email'> <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>Password reset instructions have been sent to your email.</p>")
-
+			   analytics.track('Reset Password')
 			  },
 			  error: function(error) {
 			    $(".alerts").append("<p class='alert alert-danger alert_text alert-dismissible' role='alert id='invalid_email'> <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>Error: " + error.message + "</p>")
@@ -71,6 +71,7 @@ $(document).ready(function(){
 				
 				user.signUp(null, {
 				  success: function(user) {
+				  	analytics.track('Account Created')
 				    window.location.href = "../HTML/user.html";
 				  },
 				  error: function(user, error) {
