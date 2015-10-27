@@ -27,11 +27,17 @@ for (i = 0; i < object.length; i++) {
 });
 
 function load (fname, lname, id, image) {
-	$(".name_list_box").append(
+	$(".container").append(
     "<a class='card-link' href='../HTML/profile.html?"+id+"'><div class='person-card hvr-grow-shadow' id='"+id+"'>"+
-      "<img class='prof-pic' src='"+image+"'>"+
+      "<div class='picture-div' id='"+id+"-picture'><</div>"+
       "<div class='name-half'>"+
         "<h3 clas='name'>"+fname+ " " + lname+ "</h3>"+
       "</div></div></a>"
 		)
+
+  $("#"+id+"-picture").css("background","url("+image+")");
+  $("#"+id+"-picture").css("background-size","cover");
 }
+
+
+
