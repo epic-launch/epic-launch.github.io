@@ -2,8 +2,16 @@ Parse.initialize("ytmORm1NEOXV8e5ELZkEou62ywM4JJUS88R0V7UD", "xpYRPtwBActyCUjH1n
 var page_id = window.location.toString().split("?")[1]
 console.log(page_id)
 var contact;
-var current = Parse.User.current();
-
+var currentUser = Parse.User.current();
+if (currentUser != null){
+    $("#log").text("Logout")
+    $("#log").addClass("logout");
+    console.log("logout")
+  }else if (currentUser === null){
+    $("#log").text("Login")
+    $("#log").addClass("login")
+    console.log("login")
+  }
 var User = Parse.Object.extend("User");
 var query = new Parse.Query(User);
 query.equalTo("objectId", page_id)
@@ -70,3 +78,10 @@ query.first({
   }
 });
 
+$(".logout").click(function(){
+    Parse.User.logOut();
+})
+
+$(".logoin").click(function(){
+ window.location.href = "../HTML/login.html"
+})

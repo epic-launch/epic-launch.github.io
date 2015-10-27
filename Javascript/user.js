@@ -1,8 +1,12 @@
 Parse.initialize("ytmORm1NEOXV8e5ELZkEou62ywM4JJUS88R0V7UD", "xpYRPtwBActyCUjH1nkvaSckiiyo7d07O9FQHO0N");
 var currentUser = Parse.User.current();
-  if (currentUser === null){
+  if (currentUser != null){
+    $("#log").text("Logout")
+    $("#log").addClass("logout");
+    console.log("logout")
+  }else if (currentUser === null){
     window.location.href = "../HTML/login.html"
-  }
+  } 
 var name = currentUser.get("first_name");
 var userEmail = currentUser.get("email");
 var userFirstName = currentUser.get("first_name");
@@ -147,5 +151,13 @@ $("#pass_reset").click(function(){
         }
       });
     
+})
+
+$(".logout").click(function(){
+    Parse.User.logOut();
+})
+
+$(".logoin").click(function(){
+ window.location.href = "../HTML/login.html"
 })
 

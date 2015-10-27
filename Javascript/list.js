@@ -1,5 +1,12 @@
 Parse.initialize("ytmORm1NEOXV8e5ELZkEou62ywM4JJUS88R0V7UD", "xpYRPtwBActyCUjH1nkvaSckiiyo7d07O9FQHO0N");
-
+var currentUser = Parse.User.current();
+if (currentUser != null){
+    $("#log").text("Logout")
+    $("#log").addClass("logout")
+  }else{
+    $("#log").text("Login")
+    $("#log").addClass("login")
+  }
 var User = Parse.Object.extend("User");
 var query = new Parse.Query(User);
 query.ascending("first_name")
@@ -39,5 +46,10 @@ function load (fname, lname, id, image) {
   $("#"+id+"-picture").css("background-size","cover");
 }
 
+$(".logout").click(function(){
+    Parse.User.logOut();
+})
 
-
+$(".logoin").click(function(){
+ window.location.href = "../HTML/login.html"
+})
